@@ -1,11 +1,11 @@
 public class Calculator {
 	
-    public int solver(int a, int b, int c){
-        int numberTimes = times(a,b);
-        int numberDiv = div(c,a);
-        int numberAdd = add(numberTimes,numberDiv);
-        return dif(numberAdd,a);
-
+    public int solver(int a, int b, int c) {
+        int numberTimes = times(a, b);
+        int numberDiv = div(c, a);
+        int numberAdd = add(numberTimes, numberDiv);
+        return dif(numberAdd, a);
+    }
     public int add(int a, int b) {
         return a + b;
     }
