@@ -28,6 +28,6 @@ class CalculatorTest {
 
     @Test
     void solver() {
-        assertEquals(6, calculator.solver(1, 2, 1));
+        assertEquals(new Calculator().solver(2,0,1),-2);
     }
 }
