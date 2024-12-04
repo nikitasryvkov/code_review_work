@@ -8,6 +8,10 @@ public class Calculator {
     }
 
     public int div(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Divide by zero error");
+        }
+
         return a / b;
     }
 
