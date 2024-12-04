@@ -4,24 +4,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
+    Calculator calculator = new Calculator();
+
     @Test
     void add() {
-        assertEquals(new Calculator().add(2,1),3);
+        assertEquals(5, calculator.add(1, 4));
     }
 
     @Test
     void dif() {
-        assertEquals(new Calculator().dif(2,1),1);
+        assertEquals(5, calculator.dif(10, 5));
     }
 
     @Test
     void div() {
-        assertEquals(new Calculator().div(2,1),2);
+        assertEquals(5, calculator.div(25, 5));
     }
 
     @Test
     void times() {
-        assertEquals(new Calculator().times(2,1),2);
+        assertEquals(5, calculator.times(5, 05));
     }
 
     @Test
