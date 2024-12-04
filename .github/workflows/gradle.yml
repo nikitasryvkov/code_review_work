@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        version: [11, 13, 17]
+        version: [11, 57, 17]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
