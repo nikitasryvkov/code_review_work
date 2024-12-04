@@ -9,31 +9,31 @@ on:
     
 
 jobs:
-  build-11-17:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        version: [11, 17]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+  # build-11:
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest, windows-latest, macos-latest]
+  #       version: [11]
+  #   runs-on: ${{ matrix.os }}
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
 
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          java-version: ${{ matrix.version }}
-          distribution: 'temurin'
+  #     - name: Set up JDK
+  #       uses: actions/setup-java@v3
+  #       with:
+  #         java-version: ${{ matrix.version }}
+  #         distribution: 'temurin'
 
-      - name: Add permition to gradlew
-        run: chmod +x ./gradlew
+  #     - name: Add permition to gradlew
+  #       run: chmod +x ./gradlew
 
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build
-      - name: Tests
-        run: ./gradlew test
+  #     - name: Build with Gradle
+  #       uses: gradle/gradle-build-action@v2
+  #       with:
+  #         arguments: build
+  #     - name: Tests
+  #       run: ./gradlew test
 
   # build-13:
   #   strategy:
@@ -60,3 +60,29 @@ jobs:
   #         arguments: build
   #     - name: Tests
   #       run: ./gradlew test
+
+  build-17:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        version: [17]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.version }}
+          distribution: 'temurin'
+
+      - name: Add permition to gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
+      - name: Tests
+        run: ./gradlew test
