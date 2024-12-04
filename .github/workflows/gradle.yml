@@ -7,6 +7,7 @@ on:
     branches: [ "main" ]
     
 
+
 jobs:
   build-ubuntu-java-11:
     name: Build on Ubuntu with Java 11
@@ -21,7 +22,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      - name: Add permition to gradlew
+      - name: Make gradlew executable
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
@@ -29,5 +30,5 @@ jobs:
         with:
           arguments: build
 
-      - name: Tests
+      - name: Run tests
         run: ./gradlew test
