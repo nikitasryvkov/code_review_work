@@ -23,7 +23,7 @@ class CalculatorTest {
 
     @Test
     void times() {
-        assertEquals(5, calculator.times(5, 05));
+        assertEquals(5, calculator.times(5, 1));
     }
 
     @Test
