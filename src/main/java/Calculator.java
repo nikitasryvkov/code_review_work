@@ -14,10 +14,10 @@ public class Calculator {
     public int times(int a, int b){
         return a * b;
     }
-    public int solver(int a, int b, int c){ //53x - 6 = 0
-        int d = times(a,b);
-        int e = div(c,a);
-        int f = add(d,e);
-        return dif(f,a);
+    public int solver(int a, int b, int c){
+        int numberTimes = times(a,b);
+        int numberDiv = div(c,a);
+        int numberAdd = add(numberTimes,numberDiv);
+        return dif(numberAdd,a);
     }
 }
